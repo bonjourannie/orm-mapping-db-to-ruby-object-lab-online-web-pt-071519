@@ -119,7 +119,8 @@ class Student
     sql = <<-SQL
     SELECT * 
     FROM students 
-    WHERE 
+    WHERE grade = ?
+    
     
   end
   
