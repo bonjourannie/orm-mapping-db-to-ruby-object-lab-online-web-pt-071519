@@ -120,6 +120,8 @@ class Student
     SELECT * 
     FROM students 
     WHERE grade = ?
+    ORDER BY students.id
+  SQL 
     
     
   end
