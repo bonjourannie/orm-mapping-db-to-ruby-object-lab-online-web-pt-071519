@@ -94,8 +94,11 @@ class Student
     FROM students 
     WHERE grade = 10
     ORDER BY student.id LIMIT 1
-    SQL 
+    SQL
     
+    DB[:conn].execute(sql).map do |row|
+      self.new_from_db(row)
+    end.first
   end
   
   def self.first_X_students_in_grade_10(number)
